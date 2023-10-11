@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(80, 110, 21);
+
+    background: url("../img/GettyImages-.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    background-color: rgb(1, 18, 41);
+}
+
+nav a {
+    display:flex ;
+    justify-content: flex-start;
+    margin-left: 1em;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(19, 169, 19);
+    
+}
+
+.formulario {
+    width: 25em;
+    height: 25em;
+    position: relative;
+    background: transparent;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 {
+    text-align: center;
+    color: black;
+    font-size: 2.2em;
+}
+
+.ingresar {
+    width: 250px;
+    margin: 40px 0;
+    position: relative;
+    border-bottom: 3px solid white;
+}
+
+.ingresar label {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    color: black;
+    transform: translateY(-40%);
+    pointer-events: none;
+    font-size: 1em;
+    transition: .2s;
+
+}
+input:focus ~ label,
+input:valid ~ label {
+top: -10px
+}
+.ingresar input {
+    height: 2em;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1em;
+    padding: 0 30px 0 5px;
+    color: rgb(9, 9, 8);
+}
+
+.ingresar ion-icon {
+    position: absolute;
+    font-size: 1.5em;
+    color: black;
+    right: 6px;
+    top: 4px;
+}
+
+.recordar {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+    color: white;
+    margin: 8px 0 20px;
+}
+
+button {
+    height: 2em;
+    width: 100%;
+    background: white;
+    outline: none;
+    border-radius: 2em  ;
+    border: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green;
+}
+
+.registro {
+    text-align: center;
+    margin: 20px 0 10px;
+    font-size: 1em;
+    color: black;
+}
+
+.registro p a {
+    text-decoration: none;
+    color: rgb(7, 53, 7);
+    font-weight: bolder;
+}
+ .registro p a:hover {
+    color: white;
+ }

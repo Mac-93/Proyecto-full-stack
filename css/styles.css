@@ -13,6 +13,8 @@ html {
     scroll-behavior:smooth;
 } */
 
+/* Definbición de propiedades generales */
+
 button {
     padding: 8px 14px;
     font-size: 1.2em;
@@ -61,11 +63,15 @@ li {
     
 }
 
+/* Propiedades del container que se usara en varias secciones */
+
 .container {
     max-width: 1600px;
     margin-left: 10px;
     margin-right: 10px;
 }
+
+/* --------------------------------------- */
 
 header {
     background-color: rgb(1, 18, 41);
@@ -78,20 +84,17 @@ header .container {
 }
 
 header .logo-i {
-    height: 10em;
-    width: auto;
-    border-radius: 50%;
-    margin-top: 10px;
+    height: 160px;
+    width: 180px;
+    margin:15px;
     padding: 5px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 30px 1px rgba(237, 17, 17, 0.7);
     
 }
 
-header .logo-p {
-    position: absolute;
-    top: 5em;
-    font-size: 1.2em;
-    color: black;  
-}
+
+
  header nav {
     display: flex;
     flex-direction: row;
@@ -111,29 +114,80 @@ header a:hover {
     color: rgb(247, 246, 246);
 }
 
+
+/* ---------------------------------- */
+
 #section-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("../img/bosque11.jpg"),
-        linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+    background-image: url("../img/glaciares-1551704.jpg"),
+    linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.8));
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
-    color: rgb(5, 30, 5);
+    height: 90vh;
+    color: rgb(1, 22, 2);
     background-position: center center;
 }
 
+#section-1 h1 {
+    font-size: 4em;
+}
+
+#section-1 h4 {
+    color: rgb(14, 14, 14);
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+/* -------------------------------------- */
+
 #section-2 {
-    background-color: rgb(2, 100, 20);
+    /* background-color: rgb(2, 100, 20); */
+    background-image: url("../img/vector.jpg"),
+    linear-gradient(0deg, rgba(5, 5, 5, 0.8), rgba(5, 6, 74, 0.8));
+    box-shadow: 50px 10px 50px 50px rgb(3, 3, 13);
+    
+    
 }
 
 #section-2 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 100px 10px;
+    padding: 100px;    
+    
 }
+
+#section-2 p {
+    box-shadow: 2px 15px 10px 2px rgb(7, 11, 66);
+    font-size: 1.4em;
+    color: white;
+    
+    
+}
+
+#section-2 h2 {
+    color: white;
+}
+
+#section-2 button {
+    margin-top: 30px;
+    background-color: rgb(1, 1, 98);
+    border-radius: 400% 400% 100% 100%;
+    padding: 15px;
+    box-shadow: 2px 15px 10px 4px rgb(22, 22, 113);
+}
+
+#section-2 button:hover {
+    background-color: rgb(2, 2, 35);
+    
+}
+
+/* -------------------------------------- */
 
 #section-3 {
     background-color: rgb(30,30,30);
@@ -154,6 +208,12 @@ header a:hover {
 #section-3 p {
     display: none;
 }
+
+#section-3 h3 {
+    margin-top: 0;
+    color: black;
+}
+
 
 #section-3 .cartas {
     background-position: center center;
@@ -200,10 +260,18 @@ header a:hover {
     ;
 }
 
+/* ------------------------------------------ */
+
+#section-4 {
+    background-color: rgb(0, 24, 14);
+}
+
 #section-4 .container {
     text-align: center;
     padding: 100px 10px;
-    background-image: url("../img/placa.jpg");
+    background-image: url("../img/rm314-bb-18.jpg"),
+    linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.8));
+    background-size: cover;
 }
 
 #section-4 li {
@@ -218,6 +286,12 @@ header a:hover {
     padding: 3em;
 }
 
+#section-4 li:hover {
+    color: white;
+}
+
+/* -------------------------------------- */
+
 footer {
     background-color: rgb(3, 69, 3);
 }
@@ -227,8 +301,116 @@ footer p {
 }
 
 footer .container {
-    height: 120px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* Definición de media query */
+
+@media (min-width: 700px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-around; 
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        
+    }
+
+    #section-3 .categorias {
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        grid-template-rows: auto auto;
+        justify-content: space-evenly;
+           
+    }
+
+     #section-3 p {
+        display: block;
+    } 
+
+   
+
+}
+
+
+@media (max-width: 1200px) {
+    #section-3 .categorias {
+        display: grid;
+        grid-template-columns: 30% 30%;
+        justify-content: space-evenly;
+           
+    }
+
+}
+
+@media (max-width: 1000px) {
+    #section-3 .categorias {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 350px) {
+    #section-1 h1 {
+        font-size: 2em;
+       
+    }
+
+    #section-2 h2 {
+        font-size: 2em;
+    }
+
+    header .logo-i {
+        width: 100%;
+    }
+
+    #section-3 h3 {
+        font-size: 1.4em ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #section-3 h2 {
+        font-size: 1.4em;
+    }
+
+    #section-4 li
+     {
+        margin-right: 2em;
+        font-size: 1.2em;
+    }
+
+    footer {
+        text-align: center;
+    }
+     
+
+}
+
+
+#section-2 .texto-oculto {
+    display: none;
+}
+
+
+
+
+
+
