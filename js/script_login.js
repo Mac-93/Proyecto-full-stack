@@ -1,3 +1,5 @@
+// Guardar datos de usuario en formato JSON
+
 document.querySelector('form')
     .addEventListener('submit', a => {
         a.preventDefault()
