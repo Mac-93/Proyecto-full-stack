@@ -37,7 +37,7 @@ nav a {
 
 .formulario {
     width: 25em;
-    height: 25em;
+    height: 30em;
     position: relative;
     background: transparent;
     border: 3px solid rgb(43, 4, 169);
@@ -140,3 +140,20 @@ button:hover {
  .registro a:hover {
     color: rgb(16, 17, 16);
  }
+
+
+ footer {
+    background-color: rgb(3, 69, 3);
+}
+
+footer p {
+    color: white;
+}
+
+footer .container {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
