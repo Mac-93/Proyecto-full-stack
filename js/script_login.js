@@ -1,10 +1,10 @@
 // Guardar datos de usuario en formato JSON
 
 document.querySelector('form')
-    .addEventListener('submit', a => {
-        a.preventDefault()
+    .addEventListener('submit', e => {
+        e.preventDefault()
         const datos = Object.fromEntries(
-            new FormData (a.target)
+            new FormData (e.target)
             )
-        // alert (JSON.stringify(datos))
+        alert (JSON.stringify(datos))
     })
